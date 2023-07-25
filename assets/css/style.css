@@ -24,6 +24,34 @@ img {
   width: 100%;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding-top: 30px;
+}
+.header .nav_wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.header .nav_wrapper ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+  letter-spacing: 4.32px;
+}
+.header .nav_wrapper ul li a.active {
+  border-bottom: 2px solid #000;
+}
+.header .nav_wrapper ul li a.contact {
+  border: 2px solid #000;
+}
+
 .section_1 {
   overflow: hidden;
   height: 100vh;
@@ -229,7 +257,7 @@ footer .bottom_footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 footer .bottom_footer h2 {
   font-size: 12px;
