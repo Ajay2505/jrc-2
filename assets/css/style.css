@@ -35,6 +35,37 @@ img {
   width: 100%;
 }
 
+.loading_screen {
+  width: 100%;
+  height: 100vh;
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  transition: transform 0.4s ease-in-out;
+}
+.loading_screen.loaded {
+  transform: translateY(-100%);
+}
+.loading_screen .img_wrapper {
+  max-width: 150px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -170,7 +201,6 @@ img {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  margin-top: 20px;
 }
 .section_2 .image_4 .large_text {
   padding-left: 200px;

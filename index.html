@@ -19,6 +19,11 @@
 </head>
 <body>
     <div class="site_wrap">
+        <div class="loading_screen">
+            <div class="img_wrapper">
+                <img src="/assets/images/JRC Icon.png" alt="">
+            </div>
+        </div>
         <!-- <div class="section" style="height: 100vh;"></div> -->
         <div class="header">
             <div class="container">
@@ -366,9 +371,10 @@
                 id: 'pin',
                 scrub:0
             }
-        })
+        });
 
-        tl.from(".absolute_block", {xPercent: 100}).to(".absolute_block", {xPercent: 0}).from(".absolute_block", {yPercent: 0}).to(".absolute_block", {yPercent: 280}).to(".absolute_block", {xPercent: -100})
+        tl.from(".absolute_block", {xPercent: 100}).to(".absolute_block", {xPercent: 0}).from(".absolute_block", {yPercent: 0}).to(".absolute_block", {yPercent: 200}).to(".absolute_block", {yPercent: 500}).to(".absolute_block", {xPercent: -100})
+        // tl.from(".absolute_block", {xPercent: 100}).to(".absolute_block", {xPercent: 0}).from(".absolute_block", {yPercent: 0}).to(".absolute_block", {yPercent: 280}).to(".absolute_block", {xPercent: -100})
         
         // gsap.to('.absolute_block',{
         //     xPercent: -150,
@@ -414,7 +420,7 @@
                 const progress = self.progress;
 
                 // If the animation progress is at or beyond 50%, change the color to #fff
-                if (progress >= 0.6) {
+                if (progress >= 0.08) {
                 gsap.set('.floating_block', { color: "transparent" });
                 } else {
                 // If the animation is not at or beyond 50% (scrolling back), change the color back to #000

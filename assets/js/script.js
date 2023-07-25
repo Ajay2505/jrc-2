@@ -11,4 +11,9 @@ var swiper1 = new Swiper(".mySwiper", {
 });
 
 
-
+document.addEventListener("DOMContentLoaded", function () {
+  const loadingScreen = document.querySelector(".loading_screen");
+  setTimeout(function () {
+    loadingScreen.classList.add("loaded");
+  }, 0); 
+});
