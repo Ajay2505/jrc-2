@@ -15,11 +15,21 @@
 
 }
 
-
+@font-face {
+    font-family: 'NewYork';
+    src: url('/assets/fonts/new-york/NewYork.woff2') format('woff2'),
+        url('/assets/fonts/new-york/NewYork.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 $future-font: 'future_history_demoregular';
 $future-history-2: 'future-history';
+$new_york: "NewYork";
+$sec_color: #C89A36;
+$monsterrat: 'Montserrat', sans-serif;
 
 body{
     margin: 0;
@@ -28,7 +38,11 @@ body{
 }
 
 h1,h2, h3, h4, h5, h6{
-    font-family: $future-history-2;
+    font-family: $new_york;
+}
+
+p {
+    font-family: $monsterrat;
 }
 
 img{
@@ -77,6 +91,7 @@ img{
         h1{
             font-size: 640px;
             // line-height: 1.2;
+            text-transform: uppercase;
         }
         .image_conti{
             width: 100vw;
@@ -128,7 +143,7 @@ img{
         }
     }
     .yellow_container{
-        background-color: #D8C23E;
+        background-color: $sec_color;
         width: 100vw;
         height: 100vh;
         max-width: 100%;
@@ -148,9 +163,12 @@ img{
             z-index: 8;
             transform: translate(-50%, -80%);
             h2{
+                
                 font-size: 50px;
             }
-
+            h5,p {
+                font-family: $monsterrat;
+            }
         }
         
     }
@@ -177,14 +195,19 @@ img{
             margin-top: 20px;
         }
         .large_text{
+            padding-left: 200px;
             h1{
+                font-family: $new_york;
                 font-size: 500px;
                 line-height: 0.8;
                 margin-bottom: 0;
             }
         }
         .brand_text{
-            padding-inline: 100px;
+            padding-inline: 160px;
+            margin-top: 170px;
+            transform: translateX(-30%);
+            margin-bottom: auto;
             img{
               width: 150px;
               margin-top: 0;
@@ -212,7 +235,8 @@ img{
         position: absolute;
         right: 0;
         h1{
-            font-size: 200px;
+            text-align: center;
+            font-size: 100px;
             line-height: 1;
         }
     }
@@ -247,6 +271,71 @@ img{
         }
     }
 }
+
+
+.section_4{
+    overflow: hidden;
+    position: relative;
+    .floating_block{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 500px;
+        text-align: center;
+        z-index: 10;
+        transition: color .5s ease-in-out;
+        
+        h6 {
+            font-family: $monsterrat;
+        }
+        span {
+            font-family: $monsterrat;
+            font-weight: normal;
+        }
+    }
+    .content_wrapper2{
+        display: flex;
+        position: relative;
+        .slide-1{
+            width: 100vw;
+            height: 100vh;
+            background-color: $sec_color;
+            max-width: 100%;
+            flex: 1 0 auto;
+        }
+        .slide-2{
+            z-index: 3;
+            .img_wrapper{
+                width: 100vw;
+                height: 100vh;
+                img {
+                    object-fit: cover;
+                }
+            }
+        }
+        .slide-3{
+            z-index: 4;
+            img{
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+        .slide-4{
+            z-index: 4;
+            img{
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+        .slide-5{
+            h1{
+                font-size: 640px;
+            }
+        }
+    }
+}
+
 
 footer{
     background-color: #000;

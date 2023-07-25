@@ -10,6 +10,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "NewYork";
+  src: url("/assets/fonts/new-york/NewYork.woff2") format("woff2"), url("/assets/fonts/new-york/NewYork.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   margin: 0;
   padding: 0;
@@ -17,7 +24,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "future-history";
+  font-family: "NewYork";
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
 }
 
 img {
@@ -64,6 +75,7 @@ img {
 }
 .section_1 .text_wrapper h1 {
   font-size: 640px;
+  text-transform: uppercase;
 }
 .section_1 .text_wrapper .image_conti {
   width: 100vw;
@@ -112,7 +124,7 @@ img {
      object-position: top;
 }
 .section_2 .yellow_container {
-  background-color: #D8C23E;
+  background-color: #C89A36;
   width: 100vw;
   height: 100vh;
   max-width: 100%;
@@ -132,6 +144,9 @@ img {
 }
 .section_2 .yellow_container .text_block h2 {
   font-size: 50px;
+}
+.section_2 .yellow_container .text_block h5, .section_2 .yellow_container .text_block p {
+  font-family: "Montserrat", sans-serif;
 }
 .section_2 .image_4 {
   width: 100vw;
@@ -157,13 +172,20 @@ img {
      object-position: top;
   margin-top: 20px;
 }
+.section_2 .image_4 .large_text {
+  padding-left: 200px;
+}
 .section_2 .image_4 .large_text h1 {
+  font-family: "NewYork";
   font-size: 500px;
   line-height: 0.8;
   margin-bottom: 0;
 }
 .section_2 .image_4 .brand_text {
-  padding-inline: 100px;
+  padding-inline: 160px;
+  margin-top: 170px;
+  transform: translateX(-30%);
+  margin-bottom: auto;
 }
 .section_2 .image_4 .brand_text img {
   width: 150px;
@@ -191,7 +213,8 @@ img {
   right: 0;
 }
 .section_3 .absolute_block h1 {
-  font-size: 200px;
+  text-align: center;
+  font-size: 100px;
   line-height: 1;
 }
 .section_3 .sec3_image_1 {
@@ -223,6 +246,67 @@ img {
   height: 100%;
   margin-top: 10px;
   margin-left: 16px;
+}
+
+.section_4 {
+  overflow: hidden;
+  position: relative;
+}
+.section_4 .floating_block {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  text-align: center;
+  z-index: 10;
+  transition: color 0.5s ease-in-out;
+}
+.section_4 .floating_block h6 {
+  font-family: "Montserrat", sans-serif;
+}
+.section_4 .floating_block span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
+.section_4 .content_wrapper2 {
+  display: flex;
+  position: relative;
+}
+.section_4 .content_wrapper2 .slide-1 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #C89A36;
+  max-width: 100%;
+  flex: 1 0 auto;
+}
+.section_4 .content_wrapper2 .slide-2 {
+  z-index: 3;
+}
+.section_4 .content_wrapper2 .slide-2 .img_wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.section_4 .content_wrapper2 .slide-2 .img_wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section_4 .content_wrapper2 .slide-3 {
+  z-index: 4;
+}
+.section_4 .content_wrapper2 .slide-3 img {
+  width: 100vw;
+  height: 100vh;
+}
+.section_4 .content_wrapper2 .slide-4 {
+  z-index: 4;
+}
+.section_4 .content_wrapper2 .slide-4 img {
+  width: 100vw;
+  height: 100vh;
+}
+.section_4 .content_wrapper2 .slide-5 h1 {
+  font-size: 640px;
 }
 
 footer {
