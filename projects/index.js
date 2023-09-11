@@ -739,5 +739,5 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       loadingScreen.classList.add("loaded");
     }, 2400); 
-  });
+});
   
