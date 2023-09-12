@@ -19,6 +19,10 @@ $("#phone2").intlTelInput({
     initialCountry: "in"
 });
 
+$("#phone3").intlTelInput({
+    initialCountry: "in"
+});
+
 gsap.ticker.lagSmoothing(0);
 ScrollTrigger.config(
     {
