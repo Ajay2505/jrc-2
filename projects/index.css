@@ -396,10 +396,10 @@ input[type="number"] {
 
 .main_section .floating_text {
     left: 80px;
-    top: 50%;
+    top: 30%;
     text-align: end;
     line-height: 2;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
 }
 
 .animated_lines {
