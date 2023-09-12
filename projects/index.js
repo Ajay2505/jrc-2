@@ -28,6 +28,7 @@ ScrollTrigger.config(
 
 gsap.to(".main_heading", {
     y: 950,
+    // color: "#fff",
     scrollTrigger: {
         trigger: ".main_section",
         start: "center bottom",
@@ -420,7 +421,6 @@ gsap.to(kitchen, {
     }
 });
 
-
 // const kitchen = document.querySelector(".kitchen_section .kitchen_items .content_wrapper");
 // function getScrollAmount(){
 //     let scrollAmount = kitchen.scrollWidth;
@@ -446,6 +446,7 @@ gsap.to(kitchen, {
 // });
 
 // Last Horizontal scroll section
+
 const hScrollItems = document.querySelectorAll(".hscroll_section .items .item");
 hScrollItems.forEach((item, idx) => {
     if (idx % 2 !== 0) {
@@ -673,22 +674,22 @@ setPosition(projectSelector[0]);
 let isScrolling = false;
 let scrollingTimeout;
 
-window.addEventListener("wheel", evt => {
-    const header = document.querySelector(".header");
-    header.classList.add("hide");
-    // if (evt.deltaY > 0) {        
-    // }
-    // if (evt.deltaY < 0) {        
-    //     header.classList.remove("hide");
-    // }
-    if (!isScrolling) {
-        isScrolling = true;
-    }
+// window.addEventListener("wheel", evt => {
+//     const header = document.querySelector(".header");
+//     header.classList.add("hide");
+//     // if (evt.deltaY > 0) {        
+//     // }
+//     // if (evt.deltaY < 0) {        
+//     //     header.classList.remove("hide");
+//     // }
+//     if (!isScrolling) {
+//         isScrolling = true;
+//     }
 
-    clearTimeout(scrollingTimeout);
+//     clearTimeout(scrollingTimeout);
 
-    scrollingTimeout = setTimeout(handleScrollStop, 100);
-});
+//     scrollingTimeout = setTimeout(handleScrollStop, 100);
+// });
 
 
 // // Function to handle the scroll stop event
