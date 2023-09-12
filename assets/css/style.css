@@ -192,7 +192,7 @@ img {
 .section_2 .image_4 .horizontal_wrapper {
   background-color: #fff;
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 .section_2 .image_4 img {
   width: 100%;

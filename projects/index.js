@@ -23,6 +23,10 @@ $("#phone3").intlTelInput({
     initialCountry: "in"
 });
 
+$("#phone4").intlTelInput({
+    initialCountry: "in"
+});
+
 gsap.ticker.lagSmoothing(0);
 ScrollTrigger.config(
     {
@@ -752,10 +756,10 @@ function closeModal() {
     lenis.start();
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const loadingScreen = document.querySelector(".loading_screen");
-//     setTimeout(function () {
-//       loadingScreen.classList.add("loaded");
-//     }, 2400); 
-// });
+document.addEventListener("DOMContentLoaded", function () {
+    const loadingScreen = document.querySelector(".loading_screen");
+    setTimeout(function () {
+      loadingScreen.classList.add("loaded");
+    }, 2400); 
+});
   

@@ -265,7 +265,7 @@ button:disabled {
 .download_plans_modal .content {
     color: #333333;
     border-radius: 14px;
-    background-color: var(--bg_main);
+    background-color: var(--bg-sec);
     transform: translateY(-70px);
     opacity: 0;
     transition: transform .3s ease-in-out, opacity .3s ease-in-out;
@@ -296,6 +296,11 @@ button:disabled {
     color: #33333322;
 }
 
+.enquire_form form {
+    min-width: 600px;
+    color: #333333;
+}
+
 .enquire_form form input:hover,
 .enquire_form form textarea:hover,
 .enquire_form form textarea:hover {
@@ -321,7 +326,7 @@ button:disabled {
 }
 
 .fixed_contact {
-    right: -100px;
+    right: -120px;
     top: 40%;
     z-index: 12;
     transform: rotate(-90deg);
@@ -331,6 +336,7 @@ button:disabled {
     color: #fff;
     text-transform: uppercase;
     padding: 7px 20px;
+    /* letter-spacing: 4.32px; */
     background-color: var(--main_color);
 }
 
