@@ -652,8 +652,13 @@ section.about_section {
     }
 }
 
-.chapter_one_section {
+/* .chapter_one_section {
     color: #333333;
+} */
+
+.chapter .img_wrapper {
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .main_projects_section .project_selector {
@@ -768,7 +773,7 @@ section.about_section {
 }
 
 .main_projects_section .project_content .right_content .points_wrapper .point p {
-    bottom: -7px;
+    bottom: -16px;
     left: 10px;
     color: #fff;
 }
