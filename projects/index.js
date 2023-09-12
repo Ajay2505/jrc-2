@@ -30,34 +30,45 @@ ScrollTrigger.config(
     }
 );
 
-gsap.to(".main_heading", {
-    y: 950,
-    // color: "#fff",
-    scrollTrigger: {
-        trigger: ".main_section",
-        start: "center bottom",
-        endTrigger: ".images_overlay",
-        end: "bottom center",
-        scrub: true,
-        // markers: true
+// gsap.to(".main_heading", {
+//     y: 950,
+//     // color: "#fff",
+//     scrollTrigger: {
+//         trigger: ".main_section",
+//         start: "center bottom",
+//         endTrigger: ".images_overlay",
+//         end: "bottom center",
+//         scrub: true,
+//         // markers: true
+//     }
+// });
+
+const textValue = document.querySelectorAll('.text_wrapper.hsroll');
+// console.log(textValue.offsetWidth)
+textValue.forEach(text => {
+    function getScrollAmount(){
+        let scrollAmount = text.scrollWidth;
+        return -(scrollAmount - window.innerWidth);
     }
+    
+    const tween = gsap.to(text, {
+        x: getScrollAmount,
+        duration: 3,
+        ease: "none",
+    });
+    
+    ScrollTrigger.create({
+        trigger: text.parentElement,
+        start:"top top",
+        end: () => `+=${getScrollAmount() * -1}`,
+        pin: true,
+        pinSpacing: true,
+        animation: tween,
+        scrub:true,
+        invalidateOnRefresh: true,
+        markers:false
+    });
 });
-
-// gsap.to(".first_row", {
-//     x: -400
-// });
-
-// gsap.to(".second_row", {
-//     x: 100
-// });
-
-// gsap.to(".third_row", {
-//     x: -400
-// });
-
-// gsap.to(".images_overlay .inner", {
-//     y: -750
-// });
 
 gsap.to(".images_overlay", {
     width: "100%",
