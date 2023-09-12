@@ -247,20 +247,22 @@ button:disabled {
     }
 }
 
-.enquire_modal {
+.enquire_modal, .download_plans_modal {
     inset: 0;
     z-index: 11;
     transform: translateY(-120%);
     transition: transform 0s .3s, background-color .2s ease-in-out;
 }
 
-.enquire_modal.active {
+.enquire_modal.active, 
+.download_plans_modal.active {
     background-color: rgba(0, 0, 0, 0.40);
     transform: translateY(0);
     transition: transform 0s, background-color .2s ease-in-out;
 }
 
-.enquire_modal .modal_content {
+.enquire_modal .modal_content,
+.download_plans_modal .content {
     color: #333333;
     border-radius: 14px;
     background-color: var(--bg_main);
@@ -269,12 +271,19 @@ button:disabled {
     transition: transform .3s ease-in-out, opacity .3s ease-in-out;
 }
 
-.enquire_modal.active .modal_content {
+.download_plans_modal .content {
+    min-width: 600px;
+}
+
+.enquire_modal.active .modal_content,
+.download_plans_modal.active .content {
     opacity: 1;
     transform: translateY(0);
 }
 
-.enquire_form form input {
+.enquire_form form input,
+.enquire_form form textarea,
+.enquire_form form select {
     outline: none;
     padding: 8px 6px;
     border-radius: 8px;
@@ -282,11 +291,20 @@ button:disabled {
     transition: border .1s ease-in-out;
 }
 
-.enquire_form form input:hover {
+.enquire_form form select option:first-child {
+    opacity: .4;
+    color: #33333322;
+}
+
+.enquire_form form input:hover,
+.enquire_form form textarea:hover,
+.enquire_form form textarea:hover {
     border: 1px solid #5e656366;
 }
 
-.enquire_form form input:focus {
+.enquire_form form input:focus,
+.enquire_form form textarea:focus,
+.enquire_form form textarea:hover {
     border: 1px solid #5e656399;
 }
 
@@ -727,6 +745,10 @@ section.about_section {
     max-width: 400px;
 }
 
+.main_projects_section .project_content .right_content .points_wrapper .point:first-child {
+    margin-top: 100px;
+}
+
 .main_projects_section .project_content .right_content .points_wrapper .point {
     padding-bottom: 150px;
 }
@@ -824,15 +846,15 @@ section.about_section {
 }
 
 .key_list_section .content_wrapper .linesDiv::before {
-    background: rgba(81,85,81,0.1);   
+    background: rgba(81,85,81,0.45);  
 }
 
 .key_list_section .content_wrapper .linesDiv::after {
-    background: rgba(81,85,81,0.45);   
+    background: rgba(81,85,81,0.95);  
 }
 
 .key_list_section .linesDiv a::before {
-    background: rgba(255,255,255,0.75);
+    background: rgba(144, 110, 38, 0.1);
     transition: clip-path 0.25s ease-in 0s;
 }
 

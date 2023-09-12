@@ -37,6 +37,44 @@
         <a class="fixed_enq" href="javascript:void(0)">Enquiry</a>
     </div>
 
+    <div data-lenis-prevent class="download_plans_modal position-fixed d-grid place-items-center">
+        <div class="content p-3">
+            <h1 class="xs_heading m-0 text-end"><a class="close" onclick="closeModal()" href="javascript:void(0)">X</a></h1>
+            <div class="form px-3 pb-4 enquire_form">
+                <h1 class="small_heading text-center text-uppercase">Download floor plans</h1>
+                <form action="" class="mt-4">
+                    <div class="vstack gap-3 flex-lg-nowrap flex-wrap">
+                        <input class="w-full" type="text" placeholder="Name">
+                        <input class="w-full" type="email" placeholder="Email">
+                        <input class="w-full" id="phone" type="tel" placeholder="Phone">
+                        <div class="hstack gap-3">
+                            <select class="w-full" name="" id="">
+                                <option value="0">Facing</option>
+                                <option value="1">North</option>
+                                <option value="2">South</option>
+                                <option value="3">East</option>
+                                <option value="4">West</option>
+                            </select>
+                            <select class="w-full" name="" id="">
+                                <option value="0">Block</option>
+                                <option value="1">D</option>
+                                <option value="2">E</option>
+                                <option value="3">F</option>
+                                <option value="4">G</option>
+                                <option value="4">H</option>
+                                <option value="4">I</option>
+                                <option value="4">J</option>
+                            </select>
+                        </div>
+
+                        <textarea placeholder="Message" name="" id="" cols="10"></textarea>
+                    </div>
+                    <button class="mx-auto d-block mt-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <a href="#" class="chat_box">
         <img src="./assets/images/JRC-Logo-help-desk-icon.png" alt="">
     </a>
@@ -377,10 +415,10 @@
                                         <!-- <p class="text_xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vero reiciendis nemo!                                        </p> -->
                                     </div>
                                 </div>
-                                <div class="">
+                                <!-- <div class="">
                                     <h1>Value points</h1>
                                     <p>We will introduce the points of the floor plan.</p>
-                                </div>
+                                </div> -->
                                 <div class="points_wrapper">
                                     <div class="point">
                                         <div class="hstack gap-4">
@@ -389,7 +427,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/1ldk-faci01.jpg" alt="">
+                                                    <img src="./assets/images/3bhk/storage.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Storage</h1>
@@ -405,7 +443,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/1ldk-faci02.jpg" alt="">
+                                                    <img src="./assets/images/3bhk/living.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Living dining</h1>
@@ -421,7 +459,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/1ldk-faci03.jpg" alt="">
+                                                    <img src="./assets/images/3bhk/bedroom.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Bedroom</h1>
@@ -437,7 +475,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/1ldk-faci04.jpg" alt="">
+                                                    <img src="./assets/images/3bhk/kitchen.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Kitchen</h1>
@@ -453,7 +491,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/1ldk-faci05.jpg" alt="">
+                                                    <img src="./assets/images/3bhk/bath.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Bathroom</h1>
@@ -470,8 +508,8 @@
                 </div>
             </div>
         </div>
-        <button class="download_plan_btn main mx-auto d-block mt-5">
-            Download Floor Plan
+        <button onclick="downloadPlans()" class="download_plan_btn main mx-auto d-block mt-5">
+            Download Floor Plans
         </button>
         <div class="main_spacer_bottom"></div>
         <div class="main_project project_2">
@@ -505,10 +543,10 @@
                                         <!-- <p class="text_xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vero reiciendis nemo!                                        </p> -->
                                     </div>
                                 </div>
-                                <div class="">
+                                <!-- <div class="">
                                     <h1>Value points</h1>
                                     <p>We will introduce the points of the floor plan.</p>
-                                </div>
+                                </div> -->
                                 <div class="points_wrapper">
                                     <div class="point">
                                         <div class="hstack gap-4">
@@ -517,7 +555,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/1ldk-faci02.jpg" alt="">
+                                                    <img src="./assets/images/2bhk/living.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Living dining</h1>
@@ -565,7 +603,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/1ldk-faci04.jpg" alt="">
+                                                    <img src="./assets/images/3bhk/kitchen-2.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Kitchen</h1>
@@ -581,8 +619,8 @@
                 </div>
             </div>
         </div>
-        <button class="download_plan_btn main mx-auto d-block mt-5">
-            Download Floor Plan
+        <button onclick="downloadPlans()" class="download_plan_btn main mx-auto d-block mt-5">
+            Download Floor Plans
         </button>
         <div class="project_selector d-flex justify-content-center">
             <div class="hstack position-relative p-1 gap-2">
@@ -673,11 +711,11 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="left_wrapper">
-                        <p class="text_xs fw-medium m-0">Equipments</p>
-                        <h1 class="ter_heading">Kitchen & Wash</h1>
+                        <!-- <p class="text_xs fw-medium m-0">Equipments</p> -->
+                        <h1 class="ter_heading text-uppercase">Kitchen <br> & Wash</h1>
                     </div>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-6">
                     <div class="right_wrapper my-auto w-full h-full">
                         <p class="sub_heading">Seamlessly integrated with the living and dining areas, our design encapsulates both aesthetics and functionality.</p>
                     </div>
@@ -726,8 +764,8 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="left_wrapper">
-                        <p class="text_xs fw-medium m-0">Equipment</p>
-                        <h1 class="ter_heading">BATHROOM POWDERROOM                        </h1>
+                        <!-- <p class="text_xs fw-medium m-0">Equipment</p> -->
+                        <h1 class="text-uppercase ter_heading">BATHROOM POWDERROOM</h1>
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -947,7 +985,7 @@
     <section id="ch07" class="chapter_seven_section bg_sec main_spacer bg_bright">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 mx-auto">
+                <div class="col-lg-8 mx-auto">
                     <div class="content_wrapper animate_to_top -mt-lg-20">
                         <h1 class="text-center sec_heading text_animate text-uppercase">Where Hearts Align and Nature Embraces</h1>    
                         <p class="text-center text_animate mt-4 mb-0">We believe life gets better outdoors rather than indoors. The spacious balconies across your home let you connect with yourself, nature, and the ones you love in an exceptional way.</p>

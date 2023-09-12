@@ -735,25 +735,27 @@ function closeEnqModal() {
     lenis.start();
 }
 
+function downloadPlans() {
+    document.querySelector(".download_plans_modal").classList.add("active");
+    lenis.stop();
+}
 
-// lenis.scrollTo("#first_hs");
-// setTimeout(() => {
-//     lenis.scrollTo("#main");
-// }, 200);
+document.querySelector(".download_plans_modal").addEventListener("click", closeModal);
 
-// setTimeout(() => {
-//     // window.location.reload()
-// }, 300);
-
-
-// // ScrollTrigger.refresh();
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const loadingScreen = document.querySelector(".loading_screen");
-    setTimeout(function () {
-      loadingScreen.classList.add("loaded");
-    }, 2400); 
+document.querySelector(".download_plans_modal .content").addEventListener("click", (evt) => {
+    evt.stopPropagation();
+    // evt.target.querySelector(".country-list").classList.add("hide");
 });
+
+function closeModal() {
+    document.querySelector(".download_plans_modal").classList.remove("active");
+    lenis.start();
+}
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const loadingScreen = document.querySelector(".loading_screen");
+//     setTimeout(function () {
+//       loadingScreen.classList.add("loaded");
+//     }, 2400); 
+// });
   
