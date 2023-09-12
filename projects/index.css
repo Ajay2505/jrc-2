@@ -89,6 +89,18 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+button {
+    transition: opacity .2s ease-in-out;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+button:disabled {
+    opacity: .5;
+}
+
 .w-screen {
     width: 100vw;
 }
@@ -324,7 +336,6 @@ input[type="number"] {
     transform-origin: top;
     /* background-color: var(--bg_main); */
     transition: opacity .2s ease-in-out, transform .2s ease-in-out;
-    backdrop-filter: blur(2px);
 }
 
 .header.hide {
@@ -337,6 +348,10 @@ input[type="number"] {
     display: flex;
     justify-content: space-between;
     list-style: none;
+}
+
+.header .nav_wrapper ul li {
+    backdrop-filter: blur(2px);
 }
 
 .header .nav_wrapper ul li a {
@@ -476,9 +491,9 @@ section.about_section {
     padding-top: 50px;
 }
 
-.content_section .img_wrapper {
+/* .content_section .img_wrapper {
     max-height: 700px;
-}
+} */
 
 .linesDiv {
     position: relative;
@@ -623,6 +638,16 @@ section.about_section {
     background-color: rgba(34,34,34,0.8);
 }
 
+.download_plan_btn {
+    outline: none;
+    color: var(--bg_main);
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border-radius: 7px;
+    border: 1px solid var(--main_color);
+    background-color: var(--main_color);
+}
+
 .main_projects_section .project_selector .gooey {
     border-radius: 26px;
     border: rgba(255,255,255,0.2) 1px solid;
@@ -648,7 +673,7 @@ section.about_section {
 .main_projects_section .project_heading {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 22;
 }
 
 .main_projects_section .project_heading>div {
