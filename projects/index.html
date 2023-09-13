@@ -17,9 +17,9 @@
     
     <div data-lenis-prevent class="enquire_modal position-fixed d-grid place-items-center">
         <div class="modal_content enquire_form w-fit p-3">
-            <h1 class="xs_heading m-0 text-end"><a class="close" href="javascript:void(0)">X</a></h1>
+            <h1 class="xs_heading m-0 text-end"><a class="close text-light" href="javascript:void(0)">X</a></h1>
             <div class="form px-3 pb-4">
-                <h1 class="small_heading text-center text-uppercase">Talk to us</h1>
+                <h1 class="ter_heading text-center text-light text-uppercase">Talk to us</h1>
                 <form action="" class="mt-4">
                     <div class="hstack gap-3 flex-lg-nowrap flex-wrap">
                         <input type="text" placeholder="Name">
@@ -32,16 +32,11 @@
         </div>
     </div>
 
-    <div class="fixed_contact position-fixed d-none d-lg-flex hstack gap-4">
-        <a href="tel:+917353227722">Call Us</a>
-        <a class="fixed_enq" href="javascript:void(0)">Enquire Now</a>
-    </div>
-
     <div data-lenis-prevent class="download_plans_modal position-fixed d-grid place-items-center">
         <div class="content p-3">
-            <h1 class="xs_heading m-0 text-end"><a class="close" onclick="closeModal()" href="javascript:void(0)">X</a></h1>
+            <h1 class="xs_heading m-0 text-end text-light"><a class="close" onclick="closeModal()" href="javascript:void(0)">X</a></h1>
             <div class="form px-3 pb-4 enquire_form">
-                <h1 class="small_heading text-center text-uppercase">Download floor plans</h1>
+                <h1 class="small_heading text-center text-light text-uppercase">Download floor plans</h1>
                 <form action="" class="mt-4">
                     <div class="vstack gap-3 flex-lg-nowrap flex-wrap">
                         <input class="w-full" type="text" placeholder="Name">
@@ -73,6 +68,11 @@
                 </form>
             </div>
         </div>
+    </div>
+
+    <div class="fixed_contact position-fixed d-none d-lg-flex hstack gap-4">
+        <a href="tel:+917353227722">Call Us</a>
+        <a class="fixed_enq" href="javascript:void(0)">Enquire Now</a>
     </div>
 
     <a href="#" class="chat_box">
@@ -219,8 +219,8 @@
                             <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch01')" href="#ch01">
                                 <div class="hstack justify-content-between">
                                     <div class="content">
-                                        <p class="text-uppercase small_heading newyorkFont mb-1">plan</p>
-                                        <p>Example of JRC wildwoods floor plans</p>
+                                        <p class="text-uppercase small_heading newyorkFont mb-1">floor plan</p>
+                                        <p>Floor Plans that leave no room for ambiguity</p>
                                     </div>                                   
                                     <div class="icon_wrapper">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -231,10 +231,10 @@
                             </a>
                         </div>
                         <div class="py-3 linesDiv pe-4"> 
-                            <a class="d-block w-full h-full" onclick="console.log('Clicked!'); lenis.scrollTo('#ch02', -400)" href="#ch02">
+                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch02',{offset: -100})" href="#ch02">
                                 <div class="hstack justify-content-between">
                                     <div class="content">
-                                        <p class="text-uppercase small_heading newyorkFont mb-1">Walkway</p>
+                                        <p class="text-uppercase small_heading newyorkFont mb-1">Walkways</p>
                                         <p>The natural foliage around homes</p>
                                     </div>                                   
                                     <div class="icon_wrapper">
@@ -246,7 +246,7 @@
                             </a>
                         </div>
                         <div class="py-3 linesDiv pe-4"> 
-                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch03')" href="#ch03">
+                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch03',{offset: -100})" href="#ch03">
                                 <div class="hstack justify-content-between">
                                     <div class="content">
                                         <p class="text-uppercase small_heading newyorkFont mb-1">Corridors</p>
@@ -261,11 +261,11 @@
                             </a>
                         </div>
                         <div class="py-3 linesDiv pe-4"> 
-                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch04')" href="#ch04">
+                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch04',{offset: -100})" href="#ch04">
                                 <div class="hstack justify-content-between">
                                     <div class="content">
                                         <p class="text-uppercase small_heading newyorkFont mb-1">Kitchen & Wash</p>
-                                        <p>Perfectly framed ribbon windows</p>
+                                        <p>Morning breakfast while birds chirp at your balcony</p>
                                     </div>                                   
                                     <div class="icon_wrapper">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -276,7 +276,7 @@
                             </a>
                         </div>
                         <div class="py-3 linesDiv pe-4"> 
-                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch05')" href="#ch05">
+                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch05',{offset: -100})" href="#ch05">
                                 <div class="hstack justify-content-between">
                                     <div class="content">
                                         <p class="text-uppercase small_heading newyorkFont mb-1">Bedroom</p>
@@ -291,10 +291,10 @@
                             </a>
                         </div>
                         <div class="py-3 linesDiv pe-4"> 
-                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch06')" href="#ch06">
+                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch06',{offset: -100})" href="#ch06">
                                 <div class="hstack justify-content-between">
                                     <div class="content">
-                                        <p class="text-uppercase small_heading newyorkFont mb-1">Balcony</p>
+                                        <p class="text-uppercase small_heading newyorkFont mb-1">Balconies</p>
                                         <p>Spacious balconies that lets you connect</p>
                                     </div>                                   
                                     <div class="icon_wrapper">
@@ -306,7 +306,7 @@
                             </a>
                         </div>
                         <div class="py-3 linesDiv pe-4"> 
-                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch07')" href="#ch07">
+                            <a class="d-block w-full h-full" onclick="lenis.scrollTo('#ch07',{offset: -100})" href="#ch07">
                                 <div class="hstack justify-content-between">
                                     <div class="content">
                                         <p class="text-uppercase small_heading newyorkFont mb-1">Community</p>
@@ -329,7 +329,7 @@
     <section class="main_spacer bg_sec enquire_form">
         <div class="container">
             <div class="form px-3 w-full pb-4 mx-auto d-grid place-items-center">
-                <h1 class="ter_heading text-center text-uppercase">Talk to us</h1>
+                <h1 class="sec_heading text-center text-uppercase">Talk to us</h1>
                 <form action="" class="mt-4 w-full mx-auto">
                     <div class="hstack gap-3 flex-lg-nowrap flex-wrap justify-content-center">
                         <input style="max-width: 400px;" class="w-full" type="text" placeholder="Name">
@@ -387,12 +387,12 @@
         <div id="project_1" class="main_project project_1">
             <div class="project_heading d-flex justify-content-center">
                 <div class="position-relative w-full d-flex flex-column pt-4 justify-content-center align-items-center">
-                    <h1 class="ter_heading m-0">2 BHK</h1>
+                    <h1 class="sec_heading m-0">2 BHK</h1>
                     <div class="hide_wrapper">
                         <p>Experience Nature's Embrace</p>
                     </div>
                     <div class="img_wrapper w-full">
-                        <h1 class="sec_heading text-center m-0">JRC <br> Wildwoods</h1>
+                        <h1 class="text-uppercase text-center m-0">JRC Wildwoods</h1>
                     </div>
                 </div>
             </div>
@@ -427,7 +427,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="./assets/images/3bhk/storage.png" alt="">
+                                                    <img src="./assets/images/2bhk/storage.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Storage</h1>
@@ -443,7 +443,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="./assets/images/3bhk/living.png" alt="">
+                                                    <img src="./assets/images/2bhk/living.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Living dining</h1>
@@ -459,7 +459,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="./assets/images/3bhk/bedroom.png" alt="">
+                                                    <img src="./assets/images/2bhk/bedroom.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Bedroom</h1>
@@ -475,7 +475,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="./assets/images/3bhk/kitchen.png" alt="">
+                                                    <img src="./assets/images/2bhk/kitchen.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Kitchen</h1>
@@ -491,7 +491,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="./assets/images/3bhk/bath.png" alt="">
+                                                    <img src="./assets/images/2bhk/bath.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Bathroom</h1>
@@ -520,7 +520,7 @@
                         <p>Experience Nature's Embrace</p>
                     </div>
                     <div class="img_wrapper w-full">
-                        <h1 class="sec_heading text-center">JRC <br> Wildwoods</h1>                   
+                        <h1 class="text-center">JRC  Wildwoods</h1>                   
                     </div>
                 </div>
             </div>
@@ -555,7 +555,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="./assets/images/2bhk/living.png" alt="">
+                                                    <img src="./assets/images/3bhk/living.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Living dining</h1>
@@ -587,7 +587,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/1ldk-faci03.jpg" alt="">
+                                                    <img src="./assets/images/3bhk/bedroom.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Bedroom</h1>
@@ -603,7 +603,7 @@
                                             </div>
                                             <div class="mb-lg-5 mb-2">
                                                 <div class="img_wrapper">
-                                                    <img src="./assets/images/3bhk/kitchen-2.png" alt="">
+                                                    <img src="./assets/images/3bhk/kitchen.png" alt="">
                                                 </div>
                                                 <div class="position-relative">
                                                     <h1 class="ter_heading">Kitchen</h1>
@@ -725,7 +725,7 @@
                 <div class="col-lg-3">
                     <div class="left_wrapper">
                         <!-- <p class="text_xs fw-medium m-0">Equipments</p> -->
-                        <h1 class="ter_heading text-uppercase">Kitchen <br> & Wash</h1>
+                        <h1 class="sec_heading text-uppercase">Kitchen <br> & Wash</h1>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -736,8 +736,8 @@
             </div>
         </div>
 
-        <div class="kitchen_items w-screen h-screen">
-            <div class="content_wrapper hstack h-full w-full align-items-center">
+        <div class="kitchen_items w-full h-screen">
+            <div class="content_wrapper text_wrapper hsroll hstack h-full w-full">
                 <div class="item">
                     <div class="img_wrapper">
                         <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/kitche01.jpg" alt="">
@@ -764,7 +764,7 @@
                         <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/kitche05.jpg" alt="">
                     </div>
                     <h1 class="sub_heading montserratFont my-4">Cabinets</h1>
-                    <p class="text_xs">The high, hard-to-reach hanging cupboard was cut in half to open up the kitchen. The bottom of the hanging cupboard can be left open while cooking.                    </p>
+                    <p class="text_xs">The high, hard-to-reach hanging cupboard was cut in half to open up the kitchen.</p>
                 </div>
             </div>
 
@@ -775,13 +775,13 @@
     <section class="hscroll_section bg_main">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-4 px-lg-0">
                     <div class="left_wrapper">
                         <!-- <p class="text_xs fw-medium m-0">Equipment</p> -->
-                        <h1 class="text-uppercase ter_heading">BATHROOM POWDERROOM</h1>
+                        <h1 class="text-uppercase sec_heading">BATHROOM POWDERROOM</h1>
                     </div>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7 px-lg-0">
                     <div class="right_wrapper d-flex w-full h-full">
                         <p class="sub_heading my-auto">Elevating the ordinary into the extraordinary, our meticulously designed facilities and specifications redefine daily living. </p>
                     </div>
@@ -790,20 +790,20 @@
         </div>
 
         <div class="items">
-            <div class="content_wrapper hstack align-items-center w-screen h-screen">
+            <div class="content_wrapper hstack align-items-center w-full h-screen">
                 <div class="item">
                     <div class="img_wrapper">
                         <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/powder01.jpg" alt="">
                     </div>
                     <h1 class="sub_heading montserratFont my-4">Mirror Storage</h1>
-                    <p class="text_xs">The bathroom vanity has a three-sided mirror storage. Cosmetics and other necessary items can be neatly stored in this bag, making it very convenient for daily life.                    </p>
+                    <p class="text_xs">Cosmetics and other necessary items can be neatly stored in this bag, making it very convenient for daily life.                    </p>
                 </div>
                 <div class="item">
                     <div class="img_wrapper">
                         <img src="https://www.proud-web.jp/recommend/midsize_premium/common/img/top/powder02.jpg" alt="">
                     </div>
                     <h1 class="sub_heading montserratFont my-4">Bath</h1>
-                    <p class="text_xs">It features beautiful curves and a bathing sensation that wraps around your whole body. We deliver the comfort of being wrapped in a cradle.                    </p>
+                    <p class="text_xs">It features beautiful curves and a bathing sensation that wraps around your whole body.</p>
                 </div>
                 <div class="item">
                     <div class="img_wrapper">
@@ -1143,7 +1143,7 @@
                 <div class="col-lg-9 px-0">
                     <div class="content_wrapper">
                         <div class="underLine pb-3">
-                            <p class="m-0">Driven by design</p>
+                            <h1 class="m-0 text-uppercase sec_heading">Driven by design</h1>
                         </div>
                         <div class="linesDiv">
                             <a href="#">
@@ -1153,7 +1153,7 @@
                                             <p class="fw-medium">Curated Bliss</p>
                                         </div>
                                         <div class="vstack ">
-                                            <p class="sub_heading">Unparalled Design: Spaces crafted with unwavering focus on aesthetics, functionality & Comfort</p>
+                                            <p class="sub_heading">Spaces crafted with unwavering focus on aesthetics, functionality & Comfort</p>
                                             <p>Where Aesthetics Meet a Curated Sense of Delight</p>
                                         </div>
                                         <!-- <div class="img_wrapper z-1">
@@ -1178,7 +1178,7 @@
                                             <p class="fw-medium">Richness of <br> Simplicity</p>
                                         </div>
                                         <div class="vstack ">
-                                            <p class="sub_heading">Expertise: Wealth of experience and deep market understanding for informed decisions.</p>
+                                            <p class="sub_heading">Wealth of experience and deep market understanding for informed decisions.</p>
                                             <p>Leveraging Years of Experience for Informed and Confident Decisions</p>
                                         </div>
                                         <!-- <div class="img_wrapper z-1">
@@ -1264,7 +1264,7 @@
     <section class="main_spacer bg_sec enquire_form">
         <div class="container">
             <div class="form px-3 w-full pb-4 mx-auto d-grid place-items-center">
-                <h1 class="small_heading text-center text-uppercase">Book a site visit now</h1>
+                <h1 class="sec_heading text-center text-uppercase">Book a site visit now</h1>
                 <form action="" class="mt-4">
                     <div class="vstack gap-3 flex-lg-nowrap flex-wrap">
                         <input class="w-full" type="text" placeholder="Name">

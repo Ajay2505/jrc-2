@@ -34,6 +34,8 @@ ScrollTrigger.config(
     }
 );
 
+lenis.stop();
+
 // gsap.to(".main_heading", {
 //     y: 950,
 //     // color: "#fff",
@@ -425,20 +427,20 @@ kitchenItems.forEach((item, idx) => {
     });
 });
 
-const kitchen = document.querySelector(".kitchen_section .kitchen_items .content_wrapper");
-gsap.to(kitchen, {
-    x: () => -(kitchen.scrollWidth - window.innerWidth),
-    scrollTrigger: {
-        trigger: document.querySelector(".kitchen_section .kitchen_items"),
-        start: "top top",
-        scrub: true,
-        pin: true,
-        pinSpacer: false,
-        invalidateOnRefresh: true,
-        end: () => `+=${document.querySelector(".kitchen_section .kitchen_items").scrollWidth - window.innerWidth}`,
-        // markers: true
-    }
-});
+// const kitchen = document.querySelector(".kitchen_section .kitchen_items .content_wrapper");
+// gsap.to(kitchen, {
+//     x: () => -(kitchen.scrollWidth - window.innerWidth),
+//     scrollTrigger: {
+//         trigger: document.querySelector(".kitchen_section .kitchen_items"),
+//         start: "top top",
+//         scrub: true,
+//         pin: true,
+//         pinSpacer: false,
+//         invalidateOnRefresh: true,
+//         end: () => `+=${document.querySelector(".kitchen_section .kitchen_items").scrollWidth - window.innerWidth}`,
+//         // markers: true
+//     }
+// });
 
 // const kitchen = document.querySelector(".kitchen_section .kitchen_items .content_wrapper");
 // function getScrollAmount(){
@@ -629,16 +631,16 @@ gsap.to(".projects_section .images_wrapper", {
     }
 });
 
-gsap.to(".projects_section .content_wrapper", {
-    opacity: 1,
-    scrollTrigger: {
-        trigger: ".projects_section .content_wrapper",
-        start: "top 60%",
-        end: "center 90%",
-        toggleActions: "play complete play reverse",
-        // markers: true
-    }
-});
+// gsap.to(".projects_section .content_wrapper", {
+//     opacity: 1,
+//     scrollTrigger: {
+//         trigger: ".projects_section .content_wrapper",
+//         start: "top 60%",
+//         end: "center 90%",
+//         toggleActions: "play complete play reverse",
+//         // markers: true
+//     }
+// });
 
 
 const bgImgChangers = document.querySelectorAll(".bg_img_section .linesDiv");
@@ -693,22 +695,22 @@ setPosition(projectSelector[0]);
 let isScrolling = false;
 let scrollingTimeout;
 
-// window.addEventListener("wheel", evt => {
-//     const header = document.querySelector(".header");
-//     header.classList.add("hide");
-//     // if (evt.deltaY > 0) {        
-//     // }
-//     // if (evt.deltaY < 0) {        
-//     //     header.classList.remove("hide");
-//     // }
-//     if (!isScrolling) {
-//         isScrolling = true;
-//     }
+document.querySelector(".main_projects_section").addEventListener("wheel", evt => {
+    const header = document.querySelector(".header");
+    header.classList.add("hide");
+    // if (evt.deltaY > 0) {        
+    // }
+    // if (evt.deltaY < 0) {        
+    //     header.classList.remove("hide");
+    // }
+    if (!isScrolling) {
+        isScrolling = true;
+    }
 
-//     clearTimeout(scrollingTimeout);
+    clearTimeout(scrollingTimeout);
 
-//     scrollingTimeout = setTimeout(handleScrollStop, 100);
-// });
+    scrollingTimeout = setTimeout(handleScrollStop, 100);
+});
 
 
 // // Function to handle the scroll stop event
@@ -760,6 +762,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loadingScreen = document.querySelector(".loading_screen");
     setTimeout(function () {
       loadingScreen.classList.add("loaded");
-    }, 2400); 
+      lenis.start();
+    }, 2400);
 });
   
