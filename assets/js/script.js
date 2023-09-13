@@ -15,5 +15,5 @@ document.addEventListener("DOMContentLoaded", function () {
   const loadingScreen = document.querySelector(".loading_screen");
   setTimeout(function () {
     loadingScreen.classList.add("loaded");
-  }, 200); 
+  }, 2400); 
 });

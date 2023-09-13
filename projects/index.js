@@ -765,6 +765,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       loadingScreen.classList.add("loaded");
       lenis.start();
-    }, 200);
+    }, 2400);
 });
   
