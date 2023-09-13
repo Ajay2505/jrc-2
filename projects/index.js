@@ -272,17 +272,19 @@ headings.forEach((heading, idx) => {
             // markers: true
         }
     });
-    
-    gsap.to(heading.querySelector(".hide_wrapper"), {
-        opacity: 0,
-        marginTop: -20,
-        scrollTrigger: {
-            trigger: heading.parentElement,
-            start: "top top",
-            end: "bottom top",
-            scrub: 1,
-            // markers: true
-        }
+    const hides = heading.querySelectorAll(".hide_wrapper");
+    hides?.forEach(hide => {
+        gsap.to(hide, {
+            opacity: 0,
+            marginTop: -20,
+            scrollTrigger: {
+                trigger: heading.parentElement,
+                start: "top top",
+                end: "bottom top",
+                scrub: 1,
+                // markers: true
+            }
+        });
     });
 });
 
