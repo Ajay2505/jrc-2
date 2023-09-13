@@ -138,16 +138,16 @@ gsap.fromTo(".third_row", {
     }
 });
 
-gsap.to(".main_section .absolute_block", {
-    y: -300,
-    scrollTrigger: {
-        trigger: ".images_overlay",
-        start: "center 70%",
-        end: "bottom top",
-        scrub: true,
-        // markers: true
-    }
-});
+// gsap.to(".main_section .absolute_block", {
+//     y: -300,
+//     scrollTrigger: {
+//         trigger: ".images_overlay",
+//         start: "center 70%",
+//         end: "bottom top",
+//         scrub: true,
+//         // markers: true
+//     }
+// });
 
 // const main = () => {
 //     function getLineBreaks(node) {
